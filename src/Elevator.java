@@ -51,7 +51,7 @@ class Elevator {
     }
 
     private void countTotalTime() {
-        while (elevator.size() > 0) {
+        while (!elevator.isEmpty()) { // while the elevator is not empty
             currentFloor = elevator.remove();
             if (previousFloor != -1) {
                 totalSeconds += Math.abs(currentFloor - previousFloor) * waitMoveInSeconds;
